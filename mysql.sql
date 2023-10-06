@@ -118,13 +118,25 @@
 -- Query 3
 -- SELECT p.first_name,p.last_name
 -- FROM BOOKED AS b, TRAIN AS t INNER JOIN PASSENGER AS p ON p.SSN = b.Passanger_SSN
--- WHERE t.AvaliableOnWeekdays LIKE '%tuesday%' AND b.Status = 'Booked' AND b.Train_number = t.Train_number
+-- WHERE t.AvaliableOnWeekdays LIKE '%tuesday%' AND b.Status = 'Booked' AND b.Train_number = t.Train_number;
+
+-- Query 4
+-- SELECT t.Train_number,t.Train_name,t.Source_station,t.Destination_station,p.first_name,p.last_name,p.address,b.Ticket_Type,b.Status
+-- FROM TRAIN AS t, PASSENGER as p, BOOKED as b
+-- WHERE p.bdate > DATE('now', '-50 year') AND p.bdate < DATE('now', '-60 year');
+
+-- Query 5
+
+-- Query 6
 
 -- Query 7
+
+-- Query 8
 -- SELECT p.first_name,p.last_name
 -- FROM PASSENGER AS p
 -- WHERE p.phone LIKE '605%'
--- ORDER BY p.first_name DESC;
+-- ORDER BY p.last_name DESC;
+
 
 
 
