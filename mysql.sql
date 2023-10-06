@@ -123,13 +123,19 @@
 -- Query 4
 -- SELECT t.Train_number,t.Train_name,t.Source_station,t.Destination_station,p.first_name,p.last_name,p.address,b.Ticket_Type,b.Status
 -- FROM TRAIN AS t, PASSENGER as p, BOOKED as b
--- WHERE p.bdate > DATE('now', '-50 year') AND p.bdate < DATE('now', '-60 year');
+-- WHERE bdate BETWEEN '1963-01-01' AND '1973-12-31';
 
 -- Query 5
 
 -- Query 6
+-- SELECT p.first_name,p.last_name
+-- FROM PASSENGER AS p, TRAIN AS t,BOOKED AS b
+-- WHERE  t.Train_name = 'Golden Arrow' AND b.Status = 'Booked' AND b.Train_number = t.Train_number AND p.SSN = b.Passanger_SSN;
 
 -- Query 7
+-- SELECT t.Train_name,p.first_name,p.last_name
+-- FROM PASSENGER AS p, TRAIN AS t,BOOKED AS b
+-- WHERE b.Status = 'WaitL' AND b.Train_number = t.Train_number AND p.SSN = b.Passanger_SSN;
 
 -- Query 8
 -- SELECT p.first_name,p.last_name
@@ -137,9 +143,6 @@
 -- WHERE p.phone LIKE '605%'
 -- ORDER BY p.last_name DESC;
 
+-- Query 9
 
-
-
-
-   
 
