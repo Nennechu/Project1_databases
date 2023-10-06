@@ -116,6 +116,11 @@
 -- FROM PASSENGER AS p, TRAIN AS t,BOOKED as b
 -- WHERE b.Train_number = t.Train_number AND p.SSN = b.Passanger_SSN AND b.Status = 'Booked' AND p.first_name = 'Kris' AND p.last_name = 'Marrier' AND b.Train_number = t.Train_number;
 
+-- Query 3
+-- SELECT p.first_name,p.last_name
+-- FROM BOOKED AS b, TRAIN AS t INNER JOIN PASSENGER AS p ON p.SSN = b.Passanger_SSN
+-- WHERE t.AvaliableOnWeekdays LIKE '%tuesday%' AND b.Status = 'Booked' AND b.Train_number = t.Train_number
+
 
 
 
