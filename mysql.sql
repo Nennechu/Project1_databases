@@ -109,7 +109,13 @@
 -- INSERT INTO TRAIN_STATUS VALUES ('Friday','Orient Express',10,10,0,0);
 -- INSERT INTO TRAIN_STATUS VALUES ('Sunday','Flying Scottsman',8,0,2,4);
 -- INSERT INTO TRAIN_STATUS VALUES ('Tuesday','Golden Arrow',0,1,3,4);
--- INSERT INTO TRAIN_STATUS VALUES ('SAturday','Golden Chariot',0,0,3,3);
+-- INSERT INTO TRAIN_STATUS VALUES ('Saturday','Golden Chariot',0,0,3,3);
+
+--Query 2
+-- SELECT t.Train_name
+-- FROM PASSENGER AS p, TRAIN AS t,BOOKED as b
+-- WHERE b.Train_number = t.Train_number AND p.SSN = b.Passanger_SSN AND b.Status = 'Booked' AND p.first_name = 'Kris' AND p.last_name = 'Marrier' AND b.Train_number = t.Train_number;
+
 
 
 
