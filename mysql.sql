@@ -96,8 +96,8 @@
 
 
 -- CREATE TABLE TRAIN_STATUS(
--- Train_date VARCHAR(9) NOT NULL,
--- Train_name VARCHAR(25) PRIMARY KEY,
+-- Train_date DATE NOT NULL,
+-- Train_name VARCHAR(20) PRIMARY KEY,
 -- PremiumSeatsAvailable INT NOT NULL,
 -- GenSeatsAvailable INT NOT NULL,
 -- PremiumSeatsOccupied INT NOT NULL,
@@ -145,4 +145,4 @@
 
 -- Query 9
 
-
+.tables
