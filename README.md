@@ -1,5 +1,5 @@
 # Project1_databases
-<h2>Nathan Chugito, Tien Hoang, Hien Dao</h2>
+<h2>Nathan Chugito, Tien Hoang, Hien Dao (Group 17)</h2>
 <p>Tools used for Database project</p>
 <ul>
   <li>Lucid Charts - ER Diagrams</li>
