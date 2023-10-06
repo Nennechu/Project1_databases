@@ -57,6 +57,7 @@
 -- INSERT INTO PASSENGER VALUES ('John', 'Thomson', '8765 Redwood Drive', 'Phoenix', 'Maricopa', '214-323-7529', 717822387, '9/9/1990');
 -- INSERT INTO PASSENGER VALUES ('Jessica', 'Anderson', '908 Cooper St', 'Arlington', 'Tarrant', '914-21-0909', 676823082, '2/11/1993');
 
+
 -- CREATE TABLE BOOKED(
 -- Passanger_SSN INT NOT NULL,
 -- Train_number INT NOT NULL,
@@ -93,6 +94,7 @@
 -- INSERT INTO BOOKED VALUES(667025599, 4, 'General', 'WaitL');
 -- INSERT INTO BOOKED VALUES(343114946, 4, 'General', 'WaitL');
 
+
 -- CREATE TABLE TRAIN_STATUS(
 -- Train_date VARCHAR(9) NOT NULL,
 -- Train_name VARCHAR(25) PRIMARY KEY,
@@ -103,15 +105,12 @@
 -- FOREIGN KEY (Train_name) REFERENCES TRAIN(Train_name)
 -- );
 
-
-
-
 -- INSERT INTO TRAIN_STATUS VALUES ('Friday','Orient Express',10,10,0,0);
 -- INSERT INTO TRAIN_STATUS VALUES ('Sunday','Flying Scottsman',8,0,2,4);
 -- INSERT INTO TRAIN_STATUS VALUES ('Tuesday','Golden Arrow',0,1,3,4);
 -- INSERT INTO TRAIN_STATUS VALUES ('Saturday','Golden Chariot',0,0,3,3);
 
---Query 2
+-- Query 2
 -- SELECT t.Train_name
 -- FROM PASSENGER AS p, TRAIN AS t,BOOKED as b
 -- WHERE b.Train_number = t.Train_number AND p.SSN = b.Passanger_SSN AND b.Status = 'Booked' AND p.first_name = 'Kris' AND p.last_name = 'Marrier' AND b.Train_number = t.Train_number;
@@ -121,7 +120,11 @@
 -- FROM BOOKED AS b, TRAIN AS t INNER JOIN PASSENGER AS p ON p.SSN = b.Passanger_SSN
 -- WHERE t.AvaliableOnWeekdays LIKE '%tuesday%' AND b.Status = 'Booked' AND b.Train_number = t.Train_number
 
-
+-- Query 7
+-- SELECT p.first_name,p.last_name
+-- FROM PASSENGER AS p
+-- WHERE p.phone LIKE '605%'
+-- ORDER BY p.first_name DESC;
 
 
 
