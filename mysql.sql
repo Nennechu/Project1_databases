@@ -10,7 +10,7 @@
 -- );
 
 -- INSERT INTO TRAIN VALUES(1, 'Orient Express', 800, 600, 'Paris', 'Istanbul', 'Monday, Tuesday, Wednesday, Thursday, Friday');
--- INSERT INTO TRAIN VALUES(2, 'Flying Scotsman', 4000, 3500, 'Edinburgh', 'London', 'Friday, Saturday, Sunday');
+-- INSERT INTO TRAIN VALUES(2, 'Flying Scottsman', 4000, 3500, 'Edinburgh', 'London', 'Friday, Saturday, Sunday');
 -- INSERT INTO TRAIN VALUES(3, 'Golden Arrow', 980, 860, 'Victoria', 'Dover', 'Monday, Tuesday, Wednesday');
 -- INSERT INTO TRAIN VALUES(4, 'Golden Chariot', 4300, 3800, 'Bangalore', 'Goa', 'Saturday, Sunday');
 -- INSERT INTO TRAIN VALUES(5, 'Maharaja Express', 5980, 4510, 'Delhi', 'Mumbai','Wednesday, Thursday, Friday');
@@ -121,11 +121,14 @@
 -- WHERE t.AvaliableOnWeekdays LIKE '%tuesday%' AND b.Status = 'Booked' AND b.Train_number = t.Train_number;
 
 -- Query 4
--- SELECT t.Train_number,t.Train_name,t.Source_station,t.Destination_station,p.first_name,p.last_name,p.address,b.Ticket_Type,b.Status
+-- SELECT t.Train_number,t.Train_name,t.Source_station,t.Destination_station,p.first_name,p.last_name,p.address,b.Ticket_Type,b.Status,p.bdate
 -- FROM TRAIN AS t, PASSENGER as p, BOOKED as b
--- WHERE bdate BETWEEN '1963-01-01' AND '1973-12-31';
+-- WHERE (p.bdate BETWEEN '1963-01-01' AND '1973-12-31') AND b.Train_number = t.Train_number AND p.SSN = b.Passanger_SSN;
 
 -- Query 5
+-- SELECT PremiumSeatsOccupied + GenSeatsOccupied AS passenger_on,t.Train_name,ts.Train_date,t.Train_number
+-- FROM TRAIN AS t, TRAIN_STATUS as ts
+-- WHERE ts.Train_name= t.Train_name;
 
 -- Query 6
 -- SELECT p.first_name,p.last_name
@@ -144,5 +147,7 @@
 -- ORDER BY p.last_name DESC;
 
 -- Query 9
-
-.tables
+-- SELECT p.first_name,p.last_name
+-- FROM PASSENGER AS p, TRAIN AS t,BOOKED AS b
+-- WHERE t.AvaliableOnWeekdays LIKE '%Saturday%' AND b.Status = 'Booked' AND p.SSN = b.Passanger_SSN AND b.Train_number = t.Train_number
+-- ORDER BY p.last_name ASC;
